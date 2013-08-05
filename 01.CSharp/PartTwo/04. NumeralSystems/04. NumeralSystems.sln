@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. DecimalToBinary", "01. DecimalToBinary\01. DecimalToBinary.csproj", "{449C5C8B-9D73-407E-8478-76A8785D9324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. BinaryToDecimal", "02. BinaryToDecimal\02. BinaryToDecimal.csproj", "{7660F8C6-078E-4BEC-B32A-E27909B52655}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. DecimalToHexadecimal", "03. DecimalToHexadecimal\03. DecimalToHexadecimal.csproj", "{E80B90DD-142A-483B-A7E5-E5D9A6F46CD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{449C5C8B-9D73-407E-8478-76A8785D9324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449C5C8B-9D73-407E-8478-76A8785D9324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449C5C8B-9D73-407E-8478-76A8785D9324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449C5C8B-9D73-407E-8478-76A8785D9324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7660F8C6-078E-4BEC-B32A-E27909B52655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7660F8C6-078E-4BEC-B32A-E27909B52655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7660F8C6-078E-4BEC-B32A-E27909B52655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7660F8C6-078E-4BEC-B32A-E27909B52655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E80B90DD-142A-483B-A7E5-E5D9A6F46CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E80B90DD-142A-483B-A7E5-E5D9A6F46CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E80B90DD-142A-483B-A7E5-E5D9A6F46CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E80B90DD-142A-483B-A7E5-E5D9A6F46CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
