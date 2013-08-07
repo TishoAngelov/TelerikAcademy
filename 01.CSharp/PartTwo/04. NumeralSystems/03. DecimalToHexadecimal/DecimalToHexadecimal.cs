@@ -16,7 +16,6 @@ class DecimalToHexadecimal
         {
             Console.Write(0);
         }
-        // for positive numbers
         else if (decNum > 0)
         {
             List<string> toHex = new List<string>();
