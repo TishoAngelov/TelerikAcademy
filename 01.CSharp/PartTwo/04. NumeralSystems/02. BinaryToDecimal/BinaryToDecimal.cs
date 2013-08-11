@@ -8,7 +8,7 @@ class BinaryToDecimal
 
     static void Main()
     {
-        Console.Write("Enter one binary number (32 digits of 1 or 0): ");
+        Console.Write("Enter one binary number (digits of 1 or 0): ");
         string binNum = Console.ReadLine();
 
         BigInteger decNum = 0;
