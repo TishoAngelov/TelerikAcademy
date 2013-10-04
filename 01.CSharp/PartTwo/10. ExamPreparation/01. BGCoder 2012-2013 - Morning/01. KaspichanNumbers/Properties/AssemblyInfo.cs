@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("2. Special Value")]
+[assembly: AssemblyTitle("01. KaspichanNumbers")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("2. Special Value")]
+[assembly: AssemblyProduct("01. KaspichanNumbers")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a57d9441-0ea0-46f5-911d-e3382f6c2448")]
+[assembly: Guid("21bb5c54-93e8-41b4-a42c-e74d5c1a7376")]
 
 // Version information for an assembly consists of the following four values:
 //
