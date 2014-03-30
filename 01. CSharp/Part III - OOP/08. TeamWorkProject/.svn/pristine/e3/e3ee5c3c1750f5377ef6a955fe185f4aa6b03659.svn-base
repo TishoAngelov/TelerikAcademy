@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace ESchoolDiary
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            //// Fill ESchoolDiaryData.cs with data.
+            DataLoader.LoadStudents();
+            DataLoader.LoadTeachers();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            if (Validation.IsEmpty(txtBoxID.Text) || Validation.IsEmpty(txtBoxPassword.Password))
+            {
+                MessageBox.Show("Invalid username or password! Fields cannot be empty.");
+            }
+            else
+            {
+                Student student = ESchoolDiaryData.GetStudent(txtBoxID.Text);                
+                if (student != null && student.Password == txtBoxPassword.Password)
+                {
+                    StudentWindow studentWindow = new StudentWindow();
+                    studentWindow.LoadStudent(student);
+                    studentWindow.Show();
+                    studentWindow.Visibility = Visibility.Visible;
+                    ClearText();
+                }
+                else if (Headmaster.Instance.Pin.ToString() == txtBoxID.Text && Headmaster.Instance.Password == txtBoxPassword.Password)
+                {
+                    RegistrationChoice regChoiceWindow = new RegistrationChoice();
+                    regChoiceWindow.Show();
+                    regChoiceWindow.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password.");
+                }
+            }
+        }
+
+        private void btnForgotPsw_Click(object sender, RoutedEventArgs e)
+        {
+            ForgotPassword forgotPwd = new ForgotPassword();
+            forgotPwd.Show();
+            forgotPwd.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void ClearText()
+        {
+            txtBoxID.Text = "";
+            txtBoxPassword.Password = "";
+        }
+    }
+}

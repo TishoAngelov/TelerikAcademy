@@ -1,0 +1,72 @@
+﻿<Window x:Class="ESchoolDiary.Views.RegistrationChoice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RegistrationChoice" Height="564.514" Width="744.105" WindowStartupLocation="CenterScreen" >
+
+   
+
+    <Grid Background="#FF04244A" Margin="0,0,0,1" HorizontalAlignment="Left" Width="744">
+        <Image HorizontalAlignment="Left" Height="151" Margin="172,0,0,0" VerticalAlignment="Top" Width="135" Source="../Images/logo.png"/>
+        <Label x:Name="lblSchoolName" Content="Your School Name" HorizontalAlignment="Left" Margin="312,21,0,0" VerticalAlignment="Top" Width="202" Height="57" Foreground="#FFD8D5D5" FontFamily="Sylfaen" FontSize="18"/>
+        <Label x:Name="lblHeadmasterName" Content="Ivan Petrov, Director" HorizontalAlignment="Left" Margin="241,156,0,0" VerticalAlignment="Top" Width="202" Height="57" Foreground="#FFD8D5D5" FontFamily="Sylfaen" FontSize="18"/>
+        <TextBox x:Name="txtBoxSearch" HorizontalAlignment="Left" Height="35" Margin="206,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287" FontFamily="Sylfaen" FontSize="16" MaxLength="10" Text="Search" GotFocus="txtBoxSearch_GotFocus" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.467"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="btnSearch"  HorizontalAlignment="Left" Margin="446,230,0,0" VerticalAlignment="Top" Width="47" Height="36" BorderThickness="0" IsDefault="True" RenderTransformOrigin="1.25,0.467" Click="btnSearch_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="../Images/Search.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLogout" Content="Logout" BorderBrush="#FF04244A" HorizontalAlignment="Left" Margin="617,21,0,0" VerticalAlignment="Top" Width="75" Click="btnLogout_Click" Background="#FF04244A" Foreground="#FFD8D5D5" BorderThickness="0" Cursor="Hand" FontFamily="Sylfaen" FontSize="16"/>
+
+        <Button x:Name="btnNewStudent" Content="New Student" HorizontalAlignment="Left" Margin="203,282,0,0" VerticalAlignment="Top" Width="136" Height="32" FontFamily="Sylfaen" FontSize="18" Foreground="#FF172949" Click="btnNewStudent_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.502"/>
+                    <GradientStop Color="#FF04244A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnNewTeacher" Content="New Teacher" HorizontalAlignment="Left" Margin="359,282,0,0" VerticalAlignment="Top" Width="134" Height="32" FontFamily="Sylfaen" FontSize="18" Foreground="#FF172949" Click="btnNewTeacher_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.502"/>
+                    <GradientStop Color="#FF04244A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnNewClass" Content="New Class" HorizontalAlignment="Left" Margin="203,337,0,0" VerticalAlignment="Top" Width="136" Height="32" FontFamily="Sylfaen" FontSize="18" Foreground="#FF172949" Click="btnNewClass_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.502"/>
+                    <GradientStop Color="#FF04244A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnSaveAllChanges" Content="Save All Changes" HorizontalAlignment="Left" Margin="289,457,0,0" VerticalAlignment="Top" Width="186" Height="32" FontFamily="Sylfaen" FontSize="18" Foreground="#FF172949" Click="btnSaveAllChanges_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.502"/>
+                    <GradientStop Color="#FF04244A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
+    
+

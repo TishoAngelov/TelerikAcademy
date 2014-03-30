@@ -1,0 +1,84 @@
+﻿<Window x:Class="ESchoolDiary.Views.AddMark"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Mark" Height="369" Width="619" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="{x:Type ContextMenu}" TargetType="{x:Type ContextMenu}">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContextMenu}">
+                        <Border Background="#CD222120" CornerRadius="7, 7, 8, 8" BorderBrush="DarkGray" BorderThickness="2" Opacity="0.96">
+                            <StackPanel ClipToBounds="True" Orientation="Vertical" IsItemsHost="True" Margin="5,4,5,4"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="#FF04244A" ScrollViewer.CanContentScroll="True">
+        <Image x:Name="schoolLogo" HorizontalAlignment="Left" Height="100" Margin="124,0,0,0" VerticalAlignment="Top" Width="100" Source="../Images/logo.png"/>
+        <Label x:Name="lblSchoolName" Content="Your School Name" HorizontalAlignment="Left" Margin="224,24,0,0" VerticalAlignment="Top" Width="190" Height="42" Foreground="#FFD8D5D5" FontFamily="Sylfaen" FontSize="18"/>
+        <Label x:Name="lblSubject" Content="Choose subject: " HorizontalAlignment="Left" Margin="158,100,0,0" VerticalAlignment="Top" Width="171" 
+    		FontFamily="Sylfaen" FontSize="20" Foreground="#FFD8D5D5"/>
+        <Label x:Name="lblMarkType" Content="Type: " HorizontalAlignment="Left" Margin="158,198,0,0" VerticalAlignment="Top" Width="171" 
+    		FontFamily="Sylfaen" FontSize="20" Foreground="#FFD8D5D5"/>
+        <Label x:Name="lblMarkValue" Content="Value: " HorizontalAlignment="Left" Margin="162,147,0,0" VerticalAlignment="Top" Width="148" 
+    		FontFamily="Sylfaen" FontSize="20" Foreground="#FFD8D5D5"/>
+        <TextBox x:Name="txtMarkValue" HorizontalAlignment="Left" Height="30" Margin="270,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Background="#FFD8D5D5" FontFamily="Sylfaen" FontSize="16"/>
+
+        <Button  Height="23" HorizontalAlignment="Left"  Name="button1" VerticalAlignment="Top" Width="33" Click="btnChooseSubject_Click"  Margin="342,106,0,0" >
+            <Button.Content>
+                <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="10" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+            </Button.Content>
+            <Button.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Foreground="Snow" Header="Math" Click="MenuItem_Click_1"/>
+                    <MenuItem Foreground="Snow" Header="IT" Click="MenuItem_Click_2"/>
+                    <MenuItem Foreground="Snow" Header="Geography" Click="MenuItem_Click_3"/>
+                    <MenuItem Foreground="Snow" Header="Biology" Click="MenuItem_Click_4"/>
+                    <MenuItem Foreground="Snow" Header="History" Click="MenuItem_Click_5"/>
+                    <MenuItem Foreground="Snow" Header="Chemistry" Click="MenuItem_Click_6"/>
+                    <MenuItem Foreground="Snow" Header="Physics" Click="MenuItem_Click_7"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <Button  Height="23" HorizontalAlignment="Left"  Name="button2" VerticalAlignment="Top" Width="33" Click="btnMarkType_Click"  Margin="338,211,0,0" RenderTransformOrigin="0.364,4.522" >
+            <Button.Content>
+                <Path x:Name="BtnMarkArrow" Margin="4" VerticalAlignment="Center" Width="10" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+            </Button.Content>
+            <Button.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Foreground="Snow" Header="Current" Click="MenuItem_Click_8"/>
+                    <MenuItem Foreground="Snow" Header="Term" Click="MenuItem_Click_9"/>
+                    <MenuItem Foreground="Snow" Header="Annual" Click="MenuItem_Click_10"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <Button x:Name="btnCancel" Content="Cancel" Margin="158,282,346,0" VerticalAlignment="Top" Height="32" FontFamily="Sylfaen" FontSize="18" Foreground="#FF172949" Click="btnCancel_Click_1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.502"/>
+                    <GradientStop Color="#FF04244A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="270,282,0,0" VerticalAlignment="Top" Width="101" Height="32" FontFamily="Sylfaen" FontSize="18" Foreground="#FF172949" Click="btnSave_Click_1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF04244A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

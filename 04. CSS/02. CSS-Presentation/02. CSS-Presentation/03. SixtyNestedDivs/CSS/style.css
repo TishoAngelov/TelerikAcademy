@@ -1,0 +1,9 @@
+﻿body {
+	width: 4000px;
+}
+div {
+	background: black;
+	border: 1px solid red;
+    width: 97%;
+    border-radius: 360px;
+}

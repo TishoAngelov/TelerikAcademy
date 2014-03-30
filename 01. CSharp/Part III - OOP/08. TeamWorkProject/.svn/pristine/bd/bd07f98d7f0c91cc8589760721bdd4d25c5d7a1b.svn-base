@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace ESchoolDiary
+{
+    public class Subject
+    {
+        public enum Name
+        {
+            Math = 0, Geography = 1, Biology = 2, English = 3, IT = 4, History = 5, Chemistry = 6, Physics = 7
+        };
+
+        private List<Student> students;
+        private List<Teacher> teachers;
+
+        public List<Student> Students
+        {
+            get { return this.students; }
+            set { this.students = value; }
+        }
+
+        public List<Teacher> Teachers
+        {
+            get { return this.teachers; }
+            set { this.teachers = value; }
+        }
+
+        public void AddStudent(Student student)
+        {
+            this.Students.Add(student);
+        }
+
+        public void AddTeacher(Teacher teacher)
+        {
+            this.Teachers.Add(teacher);
+        }
+
+    }
+}

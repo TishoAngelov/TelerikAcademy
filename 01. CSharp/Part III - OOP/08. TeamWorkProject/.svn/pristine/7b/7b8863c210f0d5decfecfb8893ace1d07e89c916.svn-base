@@ -1,0 +1,30 @@
+﻿<Window x:Class="ESchoolDiary.Views.AddNewClass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add New Class" Height="450" Width="400" WindowStartupLocation="CenterScreen" >
+
+    <Grid Background="#FF04244A" Margin="0,0,0,1" HorizontalAlignment="Left" Width="400">
+        <Image HorizontalAlignment="Left" Height="151" Margin="10,10,0,0" VerticalAlignment="Top" Width="135" Source="/ESchoolDiary;component/Images/logo.png"/>
+        <Label x:Name="lblSchoolName" Content="Your School Name" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="202" Height="57" Foreground="#FFD8D5D5" FontFamily="Sylfaen" FontSize="18"/>
+        <Label x:Name="lblHeadmasterName" Content="Ivan Petrov, Director" HorizontalAlignment="Left" Margin="145,104,0,0" VerticalAlignment="Top" Width="202" Height="57" Foreground="#FFD8D5D5" FontFamily="Sylfaen" FontSize="18"/>
+        <Label x:Name="lblClass" Content="Class:" HorizontalAlignment="Left" Margin="24,162,0,0" VerticalAlignment="Top" Width="96" 
+        	FontFamily="Sylfaen" FontSize="20" Foreground="#FFD8D5D5"/>
+        <TextBox x:Name="txtBoxClass" HorizontalAlignment="Left" Height="27" Margin="125,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" 
+        	FontFamily="Sylfaen" FontSize="16" UndoLimit="10" MaxLength="10" MaxLines="1"/>
+        <Label x:Name="lblSubClass" Content="Sub Class: " HorizontalAlignment="Left" Margin="24,215,0,0" VerticalAlignment="Top" Width="96" 
+        	FontFamily="Sylfaen" FontSize="20" Foreground="#FFD8D5D5"/>
+        <TextBox x:Name="txtBoxSubClass" HorizontalAlignment="Left" Height="27" Margin="125,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" 
+        	FontFamily="Sylfaen" FontSize="16" UndoLimit="10" MaxLength="10" MaxLines="1"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="125,324,0,0" VerticalAlignment="Top" Width="136" Height="32" FontFamily="Sylfaen" FontSize="18" Foreground="#FF172949" Click="btnAdd_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.502"/>
+                    <GradientStop Color="#FF04244A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

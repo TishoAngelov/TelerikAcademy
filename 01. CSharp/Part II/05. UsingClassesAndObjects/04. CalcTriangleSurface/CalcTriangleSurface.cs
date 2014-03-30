@@ -19,7 +19,7 @@ class CalcTriangleSurface
     {
         double p = (side1 + side2 + side3) / 2;     // half perimeter (P)
 
-        return Math.Sqrt((p - side1) * (p - side2) * (p - side3));
+        return Math.Sqrt(p * (p - side1) * (p - side2) * (p - side3));
     }
 
     static double TriangleSurface(double side1, double side2, decimal angleBetween)

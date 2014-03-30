@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        table, th, td {
+            text-align: center;
+            border: 1px solid black;        
+        }
+
+        input[type="button"] {
+            width: 35px;
+            height: 35px;
+        }
+
+        th {
+            height: 50px;
+        }
+
+        .calcDispl {
+            height: 30px;
+            font-weight: bolder; 
+            text-align: right;
+        }
+    </style>
+
+    <title>Calculator 1.0</title>
+</head>
+<body>
+    <section>        
+        <form>
+            <table>
+                <colgroup>
+                    <col width="40"/>
+                    <col width="40" />
+                    <col width="40" />
+                    <col width="40" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="4">
+                            <input class="calcDispl" type="text" readonly="readonly" value="123" />
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="button" onclick="" value="1" id="btn1"/></td>
+                        <td><input type="button" onclick="" value="2" id="btn2" /></td>
+                        <td><input type="button" onclick="" value="3" id="btn3" /></td>
+                        <td><input type="button" onclick="" value="+" id="btnPlus" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" onclick="" value="4" id="btn4" /></td>
+                        <td><input type="button" onclick="" value="5" id="btn5" /></td>
+                        <td><input type="button" onclick="" value="6" id="btn6" /></td>
+                        <td><input type="button" onclick="" value="-" id="btnMinus" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" onclick="" value="7" id="btn7" /></td>
+                        <td><input type="button" onclick="" value="8" id="btn8" /></td>
+                        <td><input type="button" onclick="" value="9" id="btn9" /></td>
+                        <td><input type="button" onclick="" value="*" id="btnMultiply" /></td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2"><input style="width: 80px" type="button" onclick="" value="0" id="btn0" /></td>
+                        <td><input type="button" onclick="" value="." id="btnDecSign" /></td>
+                        <td><input type="button" onclick="" value="/" id="btnDivide" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </section>
+</body>
+</html>

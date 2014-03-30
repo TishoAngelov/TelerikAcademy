@@ -1,0 +1,24 @@
+﻿using System;
+
+namespace ESchoolDiary
+{
+    public enum TypeOfMarks
+    {
+        Current, Term, Annual
+    }
+
+    public class Mark
+    {
+        // Fields
+        private TypeOfMarks markType;
+
+        // Properties
+        public TypeOfMarks MarkType
+        {
+            get { return this.markType; }
+            set { this.markType = value; }
+        }
+
+        // Constructors
+    }
+}

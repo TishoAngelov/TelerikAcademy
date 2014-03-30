@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace ESchoolDiary
+{
+    public class SchoolClass
+    {
+        // Fields
+        private List<Student> students;
+
+        // Properties
+        // public 
+
+        // Constructors
+
+
+        // Methods
+
+
+    }
+}

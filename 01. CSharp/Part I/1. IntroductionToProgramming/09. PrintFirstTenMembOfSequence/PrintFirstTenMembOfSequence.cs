@@ -8,7 +8,7 @@ class PrintFirstTenMembOfSequence
 {
     static void Main()
     {
-        string sequence = null;
+        string sequence = string.Empty;
 
         Console.WriteLine("Print the first ten members of the sequence: 2, -3, 4, -5, 6, -7, ...");
         for (int i = 2; i < 12; i++)
@@ -22,6 +22,9 @@ class PrintFirstTenMembOfSequence
                 sequence += -i + " ";
             }
         }
+
         Console.WriteLine("The full sequence is: " + sequence);
+
+        Console.WriteLine();
     }
 }

@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ESchoolDiary
+{
+    public class Student : Person
+    {
+        // Fields
+        private List<string> notes = new List<string>() {}; //zabelejki
+
+        // Properties
+
+        public List<string> Notes
+        {
+            get
+            {
+                return this.notes;
+            }
+            protected set
+            {
+                this.notes = value;
+            }
+        }
+
+        // Constructors        
+        public Student(string firstName, string middleName, string lastName, Sex sex, DateTime birthDate, long pin)
+            : base(firstName, middleName, lastName, sex, birthDate, pin)
+        {
+            base.Password = pin.ToString();
+        }
+
+        public Student(string firstName, string middleName, string lastName, Sex sex, DateTime birthDate, long pin, string phone, string eMail, string address)
+            : base(firstName, middleName, lastName, sex, birthDate, pin, phone, eMail, address)
+        {
+            base.Password = pin.ToString();
+        }
+
+        // Methods
+        public string DisplayNotes()
+        {
+            StringBuilder result = new StringBuilder();
+            int count = 1;
+            if (notes.Count == 0)
+            {
+                return null;
+            }
+            foreach (var note in notes)
+            {
+                result.Append(count.ToString() + ". ");
+                result.Append(note);
+                result.Append(Environment.NewLine);
+                count++;
+            }
+            return result.ToString();
+        }
+    }
+}
