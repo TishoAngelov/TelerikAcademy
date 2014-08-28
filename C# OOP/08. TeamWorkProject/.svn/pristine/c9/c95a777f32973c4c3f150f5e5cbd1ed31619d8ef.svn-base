@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ESchoolDiary.Data;
+
+public class TeacherData
+{
+    private static TeacherDataClassesDataContext teacherDataContext = new TeacherDataClassesDataContext();
+
+    public static void AddTeacher(Teacher teacher)
+    {
+        teacherDataContext.AddNewTeacher(teacher.firstName, teacher.middleName, teacher.lastName, teacher.pin, teacher.phone, 
+            (int)teacher.sex, teacher.birthDate, teacher.email, teacher.address, teacher.studentHour, teacher.cabinet);
+        teacherDataContext.SubmitChanges();
+    }
+
+    public static void DeleteTeacher(long pin)
+    {
+        Teacher teacherToDelete = teacherDataContext.Teachers.Where<Teacher>(teacher => teacher.pin == pin).Single();
+        teacherDataContext.Teachers.DeleteOnSubmit(teacherToDelete);
+        teacherDataContext.SubmitChanges();
+    }
+}

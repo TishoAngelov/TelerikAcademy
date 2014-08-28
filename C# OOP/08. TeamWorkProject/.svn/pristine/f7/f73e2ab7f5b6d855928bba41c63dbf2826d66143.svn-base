@@ -1,0 +1,28 @@
+﻿using System;
+
+namespace ESchoolDiary
+{
+    public class Student : Person
+    {
+        //kolekciq s ocenkite za syotveren predmet 
+        //private Dictionary<Subject, List<double>> grades;
+
+        // Fields
+
+        // Properties
+
+        // Constructors
+        public Student(string firstName, string middleName, string lastName, Sex sex, DateTime birthDate, long pin)
+            : base(firstName, middleName, lastName, sex, birthDate, pin)
+        {
+        }
+
+        public Student(string firstName, string middleName, string lastName, Sex sex, DateTime birthDate, long pin, string phone, string eMail, string address)
+            : base(firstName, middleName, lastName, sex, birthDate, pin, phone, eMail, address)
+        {
+        }
+
+        // Methods
+
+    }
+}

@@ -1,0 +1,126 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ESchoolDiary
+{
+    class DataLoader
+    {
+        public static List<Student> LoadStudents()
+        {
+            StreamReader reader = new StreamReader(@"../../Data/studentsDataBase.txt");
+            List<Student> students = new List<Student>();
+
+            using (reader)
+            {
+                string currentLine = reader.ReadLine();
+                
+                while (currentLine != null)
+                {
+                    string[] currentLineArray = currentLine.Split('#');
+
+                    Student currentStudent = new Student();
+                    currentStudent.FirstName = (string)currentLineArray[0];
+                    currentStudent.MiddleName = (string)currentLineArray[1];
+                    currentStudent.LastName = (string)currentLineArray[2];
+                    if (currentLineArray[3] == Sex.Male.ToString())
+                    {
+                        currentStudent.Sex = Sex.Male;
+                    }
+                    else
+                    {
+                        currentStudent.Sex = Sex.Female;
+                    }
+
+                    currentStudent.BirthDate = DateTime.Parse(currentLineArray[4]);
+                    currentStudent.Pin = Convert.ToInt64(currentLineArray[5]);
+                    currentStudent.Phone = (string)currentLineArray[6];
+                    currentStudent.EMail = (string)currentLineArray[7];
+                    currentStudent.Address = (string)currentLineArray[8];
+
+                    currentLine = reader.ReadLine();
+                    students.Add(currentStudent);
+                }
+                
+            }
+
+            return students;
+        }
+
+        public static List<Teacher> LoadTeachers()
+        {
+            StreamReader reader = new StreamReader(@"../../Data/teachersDataBase.txt");
+            List<Teacher> teachers = new List<Teacher>();
+
+            using (reader)
+            {
+                string currentLine = reader.ReadLine();
+
+                while (currentLine != null)
+                {
+                    string[] currentLineArray = currentLine.Split('#');
+
+                    Teacher currentTeacher = new Teacher();
+                    currentTeacher.FirstName = (string)currentLineArray[0];
+                    currentTeacher.MiddleName = (string)currentLineArray[1];
+                    currentTeacher.LastName = (string)currentLineArray[2];
+                    if (currentLineArray[3] == Sex.Male.ToString())
+                    {
+                        currentTeacher.Sex = Sex.Male;
+                    }
+                    else
+                    {
+                        currentTeacher.Sex = Sex.Female;
+                    }
+
+                    currentTeacher.BirthDate = DateTime.Parse(currentLineArray[4]);
+                    currentTeacher.Pin = Convert.ToInt64(currentLineArray[5]);
+                    currentTeacher.Phone = (string)currentLineArray[6];
+                    currentTeacher.EMail = (string)currentLineArray[7];
+                    currentTeacher.Address = (string)currentLineArray[8];
+                    currentTeacher.Cabinet = (string)currentLineArray[9];
+                    currentTeacher.StudentHour = (string)currentLineArray[10];
+                    string[] subjectsTeaching = currentLineArray[11].Split(',');
+                    List<Subject> subjects = new List<Subject>();
+                    for (int i = 0; i < subjectsTeaching.Length; i++)
+                    {
+                        Subject subj = new Subject();
+                        switch (subjectsTeaching[i])
+	                    {
+                            case  "Math"  : subj.Name = SubjectName.Math;
+                                break;
+                                case  "Geography"  : subj.Name = SubjectName.Geography;
+                                break;
+                                case  "Biology"  : subj.Name = SubjectName.Biology;
+                                break;
+                                case  "English"  : subj.Name = SubjectName.English;
+                                break;
+                                case  "IT"  : subj.Name = SubjectName.IT;
+                                break;
+                                case  "History"  : subj.Name = SubjectName.History;
+                                break;
+                                case  "Chemistry"  : subj.Name = SubjectName.Chemistry;
+                                break;
+                                case  "Physics"  : subj.Name = SubjectName.Physics;
+                                break;
+		                default: 
+                        break;
+	                    }
+                        subjects.Add(subj);
+                    }
+
+                    currentTeacher.SubjectsTeaching = subjects;
+
+                    currentLine = reader.ReadLine();
+                    teachers.Add(currentTeacher);
+                }
+
+            }
+
+            return teachers;
+        }
+    }
+}

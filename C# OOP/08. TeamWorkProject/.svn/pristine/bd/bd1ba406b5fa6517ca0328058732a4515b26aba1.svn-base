@@ -1,0 +1,9 @@
+﻿using System;
+
+namespace ESchoolDiary
+{
+    interface ITeach
+    {
+        void AddMark(Mark mark);
+    }
+}

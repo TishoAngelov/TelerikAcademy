@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ESchoolDiary.DataEngine" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAQBDDAACAAACBAAAAAQAAABAABEAAAAAAA=</HashCode>
+      <FileName>DataEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.ESchoolDiaryData" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAMgAkAAAAAAAAAAAAEAAAAAAAAABAAAAAQAAgACIAI=</HashCode>
+      <FileName>ESchoolDiaryData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.Headmaster" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BhAAAAAAAAAQAAAgBAAAAAEACABBCAAAwAIAQBAAAAA=</HashCode>
+      <FileName>Headmaster.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ESchoolDiary.MailUtil" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MailUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.MainTeacher" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>MainTeacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.Mark" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAEABAABAAAAAAAIAAAAAAABAAAAAQIIAAICAAACA=</HashCode>
+      <FileName>Mark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.MarkException" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAIACAAAA=</HashCode>
+      <FileName>MarkException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.Person" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABABAIABEQSAAQAECIAAAAiAAAAKgAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.SchoolClass" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAIAAAAAAAAAAAAAAAIAAIAAAACA=</HashCode>
+      <FileName>SchoolClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.Student" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACggAAAAAAAAAABEAIAAAAAAAAAAAAAAAIAAIAAgICA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.Subject" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAgAAAAAAQAAAAEAAAAAAIAAgACAAI=</HashCode>
+      <FileName>Subject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ESchoolDiary.Teacher" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAwAAAAEAAABEAAAAAAAACAAAAAgCAAAAAgAIAAI=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ESchoolDiary.Validation" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAgAAEAAAAAAAAIAQIABAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ESchoolDiary.Note" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAABAAAAAEAAAQAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Note.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="ESchoolDiary.IManageSchool" Collapsed="true">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAQAAAgAAAAAAEACAAACAAAgAIAQBAAAAA=</HashCode>
+      <FileName>IManageSchool.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESchoolDiary.IPunish" Collapsed="true">
+    <Position X="9.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPunish.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESchoolDiary.ITeach" Collapsed="true">
+    <Position X="11" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>ITeach.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ESchoolDiary.Sex" Collapsed="true">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Sex.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ESchoolDiary.SubjectName" Collapsed="true">
+    <Position X="9.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAIAAAAADAAAAACAAAASAAAAAIA=</HashCode>
+      <FileName>SubjectName.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ESchoolDiary.TypeOfMarks" Collapsed="true">
+    <Position X="11" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAgEAAAAAAAAAA=</HashCode>
+      <FileName>TypeOfMarks.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace ESchoolDiary
+{
+    public static class ESchoolDiaryData
+    {
+        public static List<Student> Students { get; set; }
+        public static List<Teacher> Teachers { get; set; }
+        public static List<Subject> Subjects { get; set; }
+        public static List<SchoolClass> SchoolClasses { get; set; }
+        public static List<MainTeacher> MainTeachers { get; set; }
+        public static List<Mark> Marks { get; set; }
+    }
+}

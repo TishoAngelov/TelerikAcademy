@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace ESchoolDiary
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            //// Fill ESchoolDiaryData.cs with data.
+            DataLoader.LoadStudents();
+            DataLoader.LoadTeachers();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            if (Validation.IsEmpty(txtBoxID.Text) || Validation.IsEmpty(txtBoxPassword.Password))
+            {
+                MessageBox.Show("Invalid username or password! Fields cannot be empty.");
+            }
+            else
+            {
+                Student student = GetStudent(txtBoxID.Text, txtBoxPassword.Password);
+                if (student != null)
+                {
+                    StudentWindow studentWindow = new StudentWindow();
+                    studentWindow.LoadStudent(student);
+                    studentWindow.Show();
+                    studentWindow.Visibility = System.Windows.Visibility.Visible;                    
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password.");
+                }
+            }
+        }
+
+        private void btnForgotPsw_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private Student GetStudent(string id, string password)
+        {
+            foreach (Student student in ESchoolDiaryData.Students)
+            {
+                if (student.Pin.ToString().Equals(id))
+                {
+                    if (student.Password == password)
+                    {
+                        return student;
+                    }
+                }
+            }
+            return null;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+﻿using System;
+
+namespace ESchoolDiary
+{
+    //Otgovoren za vytreshni deinosti v konkretniq klas (otsystviq, zabelejki)
+    public class MainTeacher : Teacher
+    {
+        // Fields
+        protected int classManage;      // tuk spored men trqbva da e vyrzano nqkak s db (po nqkvo ID) i nz dali izob6to trqbva da ima pole. Tisho
+
+        // Properties
+        public int ClassManage
+        {
+            get { return this.classManage; }
+            set { this.classManage = value; }
+        }
+
+        // Constructors
+        public MainTeacher(string firstName, string middleName, string lastName, Sex sex, DateTime birthDate, long pin, int classManage)
+            : base(firstName, middleName, lastName, sex, birthDate, pin)
+        {
+            this.ClassManage = classManage;
+        }
+        
+        public MainTeacher(string firstName, string middleName, string lastName, Sex sex, DateTime birthDate, long pin, string phone, string eMail, string address,
+            string[] subjectTeaching, string studentHour, string cabinet, int classManage)
+            : base(firstName, middleName, lastName, sex, birthDate, pin, phone, eMail, address, subjectTeaching, studentHour, cabinet)
+        {
+            this.ClassManage = classManage;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+﻿using System;
+
+namespace ESchoolDiary
+{
+    //Direktora , koito shte e otgovoren za dobavqne/iztrivane na studenti
+    public class Headmaster : Person, IManageSchool
+    {        
+        // Fields
+        
+        // Properties
+
+        // Constructors
+        public Headmaster(string firstName, string middleName, string lastName, Sex sex, DateTime birthDate, long pin)
+            : base(firstName, middleName, lastName, sex, birthDate, pin)
+        {
+        }
+
+        public Headmaster(string firstName, string middleName, string lastName, Sex sex, DateTime birthDate, long pin, string phone, string eMail, string address)
+            : base(firstName, middleName, lastName, sex, birthDate, pin, phone, eMail, address)
+        {
+        }
+
+        // Methods
+        // Add methods
+        public void AddStudent(Student student)
+        {
+            ESchoolDiaryData.Students.Add(student);
+        }
+
+        public void AddSubject(Subject subject)
+        {
+            ESchoolDiaryData.Subjects.Add(subject);
+        }
+
+        public void AddSchoolClasses(SchoolClass schoolClass)
+        {
+            ESchoolDiaryData.SchoolClasses.Add(schoolClass);
+        }
+
+        public void AddTeacher(Teacher teacher)
+        {
+            ESchoolDiaryData.Teachers.Add(teacher);
+        }
+
+        public void AddMainTeacher(MainTeacher mainTeacher)
+        {
+            ESchoolDiaryData.MainTeachers.Add(mainTeacher);
+        }
+
+        // Remove methods
+        public void RemoveStudent(Student student)
+        {
+            ESchoolDiaryData.Students.Remove(student);
+        }
+
+        public void RemoveSubject(Subject subject)
+        {
+            ESchoolDiaryData.Subjects.Remove(subject);
+        }
+
+        public void RemoveSchoolClasses(SchoolClass schoolClass)
+        {
+            ESchoolDiaryData.SchoolClasses.Remove(schoolClass);
+        }
+
+        public void RemoveTeacher(Teacher teacher)
+        {
+            ESchoolDiaryData.Teachers.Remove(teacher);
+        }
+
+        public void RemoveMainTeacher(MainTeacher mainTeacher)
+        {
+            ESchoolDiaryData.MainTeachers.Remove(mainTeacher);
+        }        
+    }
+}
