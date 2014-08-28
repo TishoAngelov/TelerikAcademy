@@ -1,0 +1,22 @@
+﻿table {
+    border-collapse: collapse;
+    border: 2pt solid black;    
+}
+
+tr {
+    border-bottom: 2pt solid black;
+    border-top: 2pt solid black;
+}
+
+td, th {
+    border-left: 2pt solid black;
+    text-align: center;
+}
+
+img {
+    float: left;
+}
+
+h1 {
+    text-align: center;
+}
