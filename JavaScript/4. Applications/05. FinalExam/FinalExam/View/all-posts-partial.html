@@ -1,0 +1,13 @@
+﻿{{#data}}
+<article>
+    <header>
+        <h1>{{title}}</h1>
+        <p>Published: <time pubdate="pubdate">{{postDate}}</time></p>
+    </header>
+    <p>{{body}}</p>
+    <footer>
+        <p><small>by {{user.username}}</small></p>
+    </footer>
+</article>
+{{/data}}
+{{^data}}<h1>No posts</h1> {{/data}}

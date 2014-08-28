@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Books</title>
+    <script src="libs/underscore.js"></script>
+</head>
+<body>
+    <div>The results are in browser's console!</div>
+    <script src="book.js"></script>
+    <script>
+        var books;
+
+        books = [
+            new Book('Book 1', 'THE AUTHOR'),
+            new Book('Book 2', 'Pesho'),
+            new Book('Book 3', 'Ivaylo'),
+            new Book('Book 4', 'Doncho'),
+            new Book('Book 5', 'Telerik'),
+            new Book('Book 6', 'THE AUTHOR'),
+            new Book('Book 7', 'THE AUTHOR'),
+            new Book('Book 8', 'THE AUTHOR'),
+            new Book('Book 9', 'THE AUTHOR'),
+            new Book('Book 10', 'THE AUTHOR'),
+            new Book('Book 11', 'THE AUTHOR'),
+        ];
+
+        console.log("6. By a given collection of books, find the most popular author (the author with the highest number of books)");
+        function mostPopularAuthor(books) {
+            return _.chain(books)
+                .groupBy(function (book) {
+                    return book.author;
+                })
+                .max(function (group) {
+                    return group.length;
+                })
+            .value()[0].author;
+        }
+
+        _.forEach(books, function (book) {
+            console.log(book.toString());
+        })
+        console.log('==========================================');
+        console.log('Most popular author: ' + mostPopularAuthor(books));
+    </script>
+</body>
+</html>

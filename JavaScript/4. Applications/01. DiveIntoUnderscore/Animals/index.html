@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Animals</title>
+    <script src="libs/underscore.js"></script>
+</head>
+<body>
+    <div>The results are in browser's console!</div>
+    <script src="animal.js"></script>
+    <script>
+        var animals;
+
+        try {
+            animals = [
+                new Animal('First', 'Cats', 4),
+                new Animal('Second', 'Fishes', 100),
+                new Animal('Third', 'Dogs', 6),
+                new Animal('Fourth', 'Cats', 2),
+                new Animal('Fifth', 'Dogs', 4),
+                new Animal('Sixth', 'Cats', 100),
+            ];
+        } catch (e) {
+            console.log(e.message);
+        }
+
+        console.log('(Each animal can have 2, 4, 6, 8 or 100 legs)');
+        console.log("\n4. Write a function that by a given array of animals, groups them by species and sorts them by number of legs");
+        function groupBySpeciesAndSortByNumberOfLegs(animals) {
+            return _.chain(animals)
+                .sortBy(function (animal) {
+                    return animal.legs;
+                })
+                .groupBy(function (animal) {
+                    return animal.species;
+                })                
+                .value();
+        }
+
+        _.chain(groupBySpeciesAndSortByNumberOfLegs(animals))
+            .forEach(function (group) {
+                console.log(group[0].species);
+
+                _.forEach(group, function (animal) {
+                    console.log('\t---- ' + animal.toString());
+                })
+            });
+
+        console.log("\n5. By a given array of animals, find the total number of legs");
+        function totalNumberOfLegs(animals) {
+            var totalLegs = 0;
+            
+            _.forEach(animals, function (animal) {
+                totalLegs += animal.legs;
+            })
+
+            return totalLegs;
+        }
+
+        console.log('Total number of legs: ' + totalNumberOfLegs(animals));
+    </script>
+</body>
+</html>

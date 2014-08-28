@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Students</title>
+
+    <script src="libs/underscore.js"></script>
+</head>
+<body>
+    <div>The results are in browser's console!</div>
+    <script src="student.js"></script>
+    <script>
+        var students;
+
+        students = [
+            new Student('Aaaaa', 'Aaaaa', 1, [2, 2, 2, 2, 2, 2]),
+            new Student('Bbbbb', 'Bbbbb', 15, [3, 3, 3, 3, 3, 3]),
+            new Student('Ccccc', 'Ddddd', 18, [6, 6, 6, 6, 6, 6, 6, 6]),    // max marks
+            new Student('Ddddd', 'HHH', 20, [2, 2, 2, 2, 2, 2, 2, 2]),
+            new Student('Eeeee', 'ZZZZZZ', 24, [4, 4, 4, 4, 4, 4]),
+            new Student('Fffff', 'Aaaaa', 29, [5, 5, 5, 5, 5, 5, 5]),
+        ];
+
+        console.log("1. Write a method that from a given array of students finds all students whose first name is before its last name alphabetically. Print the students in descending order by full name. Use Underscore.js");
+        function firstNameBeforeLastName(students) {
+            return _.chain(students)
+                .filter(function (student) {
+                    return student.firstName.toLowerCase() < student.lastName.toLowerCase();
+                })
+                .value();
+        }
+
+        _.chain(firstNameBeforeLastName(students))
+            .sortBy(function (student) {
+                return student.fullName;
+            })
+            .reverse()
+            .forEach(function (student) {
+                console.log(student);
+            });
+
+        console.log("\n2. Write function that finds the first name and last name of all students with age between 18 and 24. Use Underscore.js");
+        function ageBetween18And24(students) {
+            return _.chain(students)
+                .filter(function (student) {
+                    return student.age >= 18 && student.age <= 24;
+                })
+                .value();
+        }
+
+        _.chain(ageBetween18And24(students))
+            .forEach(function (student) {
+                console.log('Firstname: ' + student.firstName +
+                            ' Lastname: ' + student.lastName +
+                            ' Age: ' + student.age);
+            })
+
+
+        console.log("\n3. Write a function that by a given array of students finds the student with highest marks");
+        function studentWithHighestMarks(students) {
+            var maxAverageMark = 2,
+                bestStudent = {};
+
+            _.forEach(students, function (student) {
+                var currAverageMark = 0;
+
+                _.forEach(student.marks, function (mark) {
+                    currAverageMark += mark;
+                });
+
+                currAverageMark = Number(currAverageMark / student.marks.length);
+
+                if (currAverageMark >= maxAverageMark) {
+                    bestStudent = student;
+                    maxAverageMark = currAverageMark;
+                }
+            });
+
+            return bestStudent;          
+        }
+
+        console.log(studentWithHighestMarks(students));
+    </script>
+</body>
+</html>
