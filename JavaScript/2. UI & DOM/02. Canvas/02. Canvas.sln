@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. DrawGraphics", "DrawGraphics\01. DrawGraphics.csproj", "{ECD90841-E760-44DF-9196-2DBB4F271528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. MovingCircle", "MovingCircle\02. MovingCircle.csproj", "{A714814C-2ED0-4294-876C-2FA9937D3542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. SnakeGame", "SnakeGame\03. SnakeGame.csproj", "{7BCE267E-FA66-450F-90B6-1405C20CE274}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECD90841-E760-44DF-9196-2DBB4F271528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD90841-E760-44DF-9196-2DBB4F271528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD90841-E760-44DF-9196-2DBB4F271528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD90841-E760-44DF-9196-2DBB4F271528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A714814C-2ED0-4294-876C-2FA9937D3542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A714814C-2ED0-4294-876C-2FA9937D3542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A714814C-2ED0-4294-876C-2FA9937D3542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A714814C-2ED0-4294-876C-2FA9937D3542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BCE267E-FA66-450F-90B6-1405C20CE274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BCE267E-FA66-450F-90B6-1405C20CE274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BCE267E-FA66-450F-90B6-1405C20CE274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BCE267E-FA66-450F-90B6-1405C20CE274}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
