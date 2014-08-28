@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Inserting elements</title>
+</head>
+<body>
+    <button onclick="insertBeforeDiv()">Insert before div</button>
+    <button onclick="insertAfterDiv()">Insert after div</button>
+    <div id="the-div">Some div element</div>
+
+    <script src="jquery-2.1.1.min.js"></script>
+    <script>
+        var beforeCounter = 1,
+            afterCounter = 1;
+
+        function insertBeforeDiv() {
+            $('<p />')
+                .html('Before div ' + beforeCounter++)
+                .insertBefore('#the-div');
+        }
+
+        function insertAfterDiv() {
+            $('<p />')
+                .html('After div ' + afterCounter++)
+                .insertAfter('#the-div');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Page color</title>
+</head>
+<body id="body">
+    <h1>Select a color for background</h1>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script>
+        var $inputColor = $('<input />');
+
+        function changeBackgroundColor(color) {
+             $('#body').css('background-color', color)
+        }        
+
+        $($inputColor)            
+            .attr('type', 'color')            
+            .on("change", function (e) { changeBackgroundColor($inputColor.val()) })
+            .appendTo('#body');
+    </script>
+</body>
+</html>
