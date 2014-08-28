@@ -1,0 +1,43 @@
+Design pattern: Simple Factory
+	* Имплементиран за видовете батерии и по-конкретно в BatteryFactory
+
+Design pattern: Strategy
+	* не ми стигна времето за документиране, но не съм сигурен дали го имам имплементирано
+
+Design pattern: Template Method
+	* не ми стигна времето за документиране, но не съм сигурен дали го имам имплементирано
+
+Design pattern: Abstract factory
+	* Имплементиран е за различните производители на компютри. Основните файлове са в папката AbstractFactory (за улеснение). Всеки производител си произвежда различни видове компютри по свой стил.
+
+Design pattern: Composite
+	* не ми стигна времето за документиране, но не съм сигурен дали го имам имплементирано
+
+Design pattern: Mediator
+	* не ми стигна времето за документиране, но не съм сигурен дали го имам имплементирано
+
+Found bottlenecks:
+	* ненужен do - while цикъл при генериране на рандом число в един от методите на Cpu.cs.
+	* goto и continiue в Main метода
+
+Found bugs:
+	* videoCard was not set to an instance. Throwing null refference exception.
+	* програмата гърми когато се подаде Lenovo. Имплементирана е функциалността за леново
+	* Липсва знак за процент при принтиране на Battery status
+
+Single responsibility principle
+	* видео картата беше имплементирана при хард диска. Съответно я изкарах в нов клас + интерфейс.
+
+Open/closed principle
+	* Computer класа. Може да се имплементират нови компютри без да се налагат промени по базовия клас.
+
+Liskov substitution principle
+	* при различните видове компютри.
+
+Interface segregation principle
+	* Разделяне на функциалността на дадения компютър (от заданието) на няколко интерфейса: IComputer, IPlayable, IChargaeble
+
+Dependency inversion principle
+	* В класа Cpu.cs. Подават се интерфейси IRamMemory и IVideoCard през конструктора, които се ползват по-късно за някои методи.
+	
+П.П.: Вероятно SOLID има и на други места, но гледам да съм кратък.

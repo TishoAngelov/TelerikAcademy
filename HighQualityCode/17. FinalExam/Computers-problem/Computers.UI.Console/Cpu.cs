@@ -1,0 +1,129 @@
+﻿namespace Computers.UI.Console
+{
+    using System;
+    using Computers.UI.Console.Interfaces;
+
+    public class Cpu : ICpu
+    {
+        private static readonly Random Random = new Random();
+
+        private readonly byte numberOfBits;
+
+        private readonly IRamMemory ram;
+
+        private readonly IVideoCard videoCard;
+
+        private IVideoCard defaultVideoCard = new MonochromeVideoCard();
+
+        public Cpu(byte numberOfCores, byte numberOfBits, IRamMemory ram)
+        {
+            this.numberOfBits = numberOfBits;
+            this.ram = ram;
+            this.NumberOfCores = numberOfCores;
+            this.videoCard = this.defaultVideoCard;
+        }
+
+        public Cpu(byte numberOfCores, byte numberOfBits, IRamMemory ram, IVideoCard videoCard)
+            : this(numberOfCores, numberOfBits, ram)
+        {
+            this.videoCard = videoCard;
+        }
+
+        public byte NumberOfCores { get; set; }
+
+        public void SquareNumber()
+        {
+            if (this.numberOfBits == 32)
+            {
+                this.SquareNum(32);
+            }
+
+            if (this.numberOfBits == 64)
+            {
+                this.SquareNum(64);
+            }
+        }
+
+        public void GenerateRandomNumber(int minValue, int maxValue)
+        {
+            int randomNumber = Random.Next(minValue, maxValue + 1);
+
+            this.ram.SaveValue(randomNumber);
+        }
+
+        // No time fo fix it :/.
+        private void SquareNum(int number)
+        {
+            if (number == 32)
+            {
+                var data = this.ram.LoadValue();
+                if (data < 0)
+                {
+                    this.videoCard.Draw("Number too low.");
+                }
+                else if (data > 500)
+                {
+                    this.videoCard.Draw("Number too high.");
+                }
+                else
+                {
+                    int value = 0;
+                    for (int i = 0; i < data; i++)
+                    {
+                        value += data;
+                    }
+
+                    this.videoCard.Draw(string.Format("Square of {0} is {1}.", data, value));
+                }
+            }
+            else if (number == 64)
+            {
+                var data = this.ram.LoadValue();
+                if (data < 0)
+                {
+                    this.videoCard.Draw("Number too low.");
+                }
+                else if (data > 1000)
+                {
+                    this.videoCard.Draw("Number too high.");
+                }
+                else
+                {
+                    int value = 0;
+                    for (int i = 0; i < data; i++)
+                    {
+                        value += data;
+                    }
+
+                    this.videoCard.Draw(string.Format("Square of {0} is {1}.", data, value));
+                }
+            }
+            else if (number == 128)
+            {
+                var data = this.ram.LoadValue();
+                if (data < 0)
+                {
+                    this.videoCard.Draw("Number too low.");
+                }
+                else if (data > 1000)
+                {
+                    this.videoCard.Draw("Number too high.");
+                }
+                else
+                {
+                    int value = 0;
+                    for (int i = 0; i < data; i++)
+                    {
+                        value += data;
+                    }
+
+                    this.videoCard.Draw(string.Format("Square of {0} is {1}.", data, value));
+                }
+            }
+            else 
+            {
+                throw new ArgumentException();
+            }
+        }
+    }
+}
