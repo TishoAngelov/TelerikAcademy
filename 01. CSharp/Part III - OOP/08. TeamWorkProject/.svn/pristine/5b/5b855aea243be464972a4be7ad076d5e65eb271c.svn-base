@@ -1,9 +1,0 @@
-﻿<Window x:Class="ESchoolDiary.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="463.514" Width="630.105">
-    <Grid>
-        <Button x:Name="btnAddStudent" Content="Add Student" HorizontalAlignment="Left" Margin="202,85,0,0" VerticalAlignment="Top" Width="105" />
-        <Button x:Name="btnAddStudent" Content="Delete Student" HorizontalAlignment="Left" Margin="202,158,0,0" VerticalAlignment="Top" Width="105"/>
-    </Grid>
-</Window>

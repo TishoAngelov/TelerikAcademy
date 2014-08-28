@@ -1,9 +1,0 @@
-﻿<Window x:Class="ESchoolDiary.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="463.514" Width="630.105">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="201,129,0,0" VerticalAlignment="Top" Width="234" Height="126" Click="Button_Click_1"/>
-
-    </Grid>
-</Window>
