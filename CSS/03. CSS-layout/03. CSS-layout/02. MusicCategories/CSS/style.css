@@ -1,0 +1,67 @@
+﻿section, article, ul, li, div, img, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+section {
+    padding: 10px;
+    width: 400px;
+    background-color: #EEEEEE;
+    overflow: auto;
+}
+
+    section article {
+        border: 1px solid #AAA6A2;
+        background-color: white;
+        padding: 15px;
+        margin: 40px 0;
+        overflow: auto;
+    }
+
+        section article p {
+            display: block;
+            float: left;
+            width: 60%;
+            vertical-align: top;
+            margin-left: 15px;
+        }
+
+        section article img {
+            border: 1px solid #AAA6A2;
+            display: inline-block;
+            float: left;
+            vertical-align: top; /* Removes the extra space that appear under the picture */
+        }
+
+button {
+    color: #F7F9F9;
+    border-top: 2px solid #E57D7F;
+    border-left: 2px solid #8A0000;
+    border-right: 2px solid #680000;
+    border-bottom: 2px solid #680000;
+    background-color: #CC0001;
+    box-shadow: inset 15px 0 0 #8A0000;
+    float: right;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    margin-left: 3px;
+    padding: 3px 20px;
+}
+
+    button:hover {
+        border-bottom: 2px solid #E57D7F;
+        border-right: 2px solid #8A0000;
+        border-left: 2px solid #680000;
+        border-top: 2px solid #680000;
+    }

@@ -1,0 +1,54 @@
+﻿html,
+body,
+ul,
+li,
+a,
+div,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  width: 960px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+  font-size: 16px;
+}
+#wrapper ul.msg-bar {
+  list-style-type: none;
+  position: relative;
+  margin-top: 200px;
+  margin-left: 50px;
+  display: inline-block;
+  width: 560px;
+}
+#wrapper ul.msg-bar > li {
+  display: inline-block;
+  padding-top: 5px;
+}
+#wrapper ul.msg-bar > li .msg-bar-btn {
+  display: inline-block;
+  color: #0094FF;
+  text-decoration: none;
+  padding: 5px 15px;
+  border: 1px solid black;
+}
+#wrapper ul.msg-bar > li:hover {
+  padding-top: 0;
+}
+#wrapper ul.msg-bar > li:hover .msg-bar-btn {
+  border-top: 6px solid #AAFFEF;
+}
+#wrapper ul.msg-bar > li:hover .msg-bar-content {
+  display: block;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  background-color: #AAFFEF;
+  width: 460px;
+  height: 200px;
+}
+#wrapper ul.msg-bar .msg-bar-content {
+  display: none;
+}
+/*# sourceMappingURL=task1.css.map */

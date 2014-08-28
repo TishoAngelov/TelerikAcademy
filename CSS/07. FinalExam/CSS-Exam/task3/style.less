@@ -1,0 +1,98 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-size: 14px;
+    font-family: 'Times New Roman';
+
+    #root {
+        width: 720px;
+        box-sizing: border-box;
+
+        #previewer {
+            margin: 3px 5px;
+            display: inline-block;
+
+
+            #large {
+                width: 460px;
+                border: 2px solid #999;
+                padding: 15px 15px;
+                float: left;
+
+                h1 {
+                    margin: 4px 0;
+                    margin-left: 77px;
+                }
+
+                img {
+                    border: 2px solid #999;
+                    border-radius: 5px;
+                    margin-top: 15px;
+                }
+            }
+
+            #list {
+                text-align: center;
+                width: 200px;
+                float: left;
+                display: inline-block;
+                border: 2px solid #999;
+
+                .title {
+                    margin-top: 5px;
+                    font-size: 1.5em;
+                    display: block;
+                }
+
+                button {
+                    border: 2px solid #999;
+                    background-color: #CCC;
+                    border-radius: 5px;
+                    padding: 15px 33.25px;
+                    margin-top: 5px;
+                    font-size: 1.1em;
+
+                    &:hover {
+                        background: #E6E6E6;
+                    }
+                }
+
+                ul {
+                    list-style-type: none;
+                    overflow: auto;
+                    height: 310px;
+
+                    li {
+                        margin: 5px;
+                        border-bottom: 2px solid #999;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        img {
+                            border-radius: 5px;
+                            margin-top: 10px;
+                            margin-bottom: 5px;
+                        }
+
+                        &.current {
+                            background-color: #CCC;
+                            border-radius: 5px;
+                            padding: 5px;
+                            margin-bottom: 0;
+                            img {
+                                width: 65px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

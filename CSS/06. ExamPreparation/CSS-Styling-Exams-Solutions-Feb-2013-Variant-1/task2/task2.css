@@ -1,0 +1,35 @@
+body, div, a, table, tr, td {
+    margin: 0;
+    padding: 0;
+}
+
+div#wrapper {
+    width: 960px;
+	font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+	font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px;
+    height: 230px;
+    width: 340px;
+    position: relative;
+}
+
+ul.tab-strip > li {
+    display: inline-block;
+}
+
+ul.tab-strip > li.current div.tab-content {
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+ul.tab-strip > li div.tab-content {
+    display: none;
+}
+
+a.tab-btn {
+    display: inline;
+    position: relative;
+}

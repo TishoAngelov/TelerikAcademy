@@ -1,0 +1,150 @@
+﻿div, li, a, ul, header, footer, nav, section, fieldset, p {
+    margin: 0;
+    padding: 0;
+}
+
+form > div {
+    display: inline-block;
+    padding: 10px;
+}
+
+form hr {
+    width: 95%;
+    border-color: #000000;
+}
+
+nav {
+    text-align: center;
+}
+
+    nav ul {
+        list-style-type: none;
+    }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+            nav ul li a {
+                font-size: 17px;
+                font-weight: bold;
+                color: #61cef6;
+            }
+
+div#bordered {
+    display: inline-block;
+    float: left;
+    overflow: auto;
+    border: 2px solid black;
+    padding: 5px;
+    padding-right: 0;
+    max-width: 518px;
+    min-width: 260px;
+}
+
+fieldset {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 250px;
+    height: 135px;
+    border: 2px solid #000000;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+    fieldset legend {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    fieldset div img {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        width: 130px;
+        height: 80px;
+    }
+
+    fieldset div p.first {
+        position: absolute;
+        top: 40px;
+        left: 140px;
+    }
+
+    fieldset div p.second {
+        position: absolute;
+        top: 75px;
+        left: 140px;
+    }
+
+    fieldset div p.third {
+        position: absolute;
+        top: 110px;
+        left: 140px;
+    }
+
+    fieldset div p.forth {
+        position: absolute;
+        top: 110px;
+        left: 30px;
+    }
+
+.last-fieldset {
+    margin-bottom: 10px;
+}
+
+#last-div {
+    float: left;
+    display: inline-block;
+    width: 210px;
+    vertical-align: top;
+    text-align: center;
+}
+
+    #last-div div {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #last-div input[type="range"] {
+        width: 80%;
+        margin-bottom: 30px;
+        margin-top: 5px;
+    }
+
+    #last-div p {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        #last-div p:first-of-type {
+            margin-top: 35px;
+        }
+
+    #last-div span:nth-child(2n) {
+        width: 40%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    #last-div span:nth-child(2n+1) {
+        width: 45%;
+        display: inline-block;
+        text-align: left;
+    }
+
+span {
+    font-weight: bold;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+    }

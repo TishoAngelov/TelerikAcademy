@@ -1,0 +1,53 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  width: 960px;
+  font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 16px;
+}
+#wrapper .select-list {
+  margin: 25px;
+  float: left;
+}
+#wrapper .select-list img {
+  margin-bottom: 80px;
+}
+#wrapper .select-list ul {
+  overflow-y: scroll;
+  display: inline-block;
+  border-radius: 5px;
+  list-style-type: none;
+  width: 150px;
+  height: 200px;
+  background: #8168ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #8168ff 0, #ffffff 100);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8168ff), color-stop(100, #ffffff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #8168ff 0, #ffffff 100);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #8168ff 0, #ffffff 100);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #8168ff 0, #ffffff 100);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #8168ff 0, #ffffff 100);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{@from-color}', endColorstr='#{@to-color}', GradientType=0);
+  /* IE6-9 */
+}
+#wrapper .select-list ul li {
+  padding: 5px 15px;
+  border-bottom: 1px solid black;
+}
+#wrapper .select-list ul li:first-letter {
+  text-decoration: underline;
+}
+#wrapper .select-list ul li:last-of-type {
+  border: none;
+}
+#wrapper .select-list ul li.selected {
+  background-color: #6C4EFF;
+}

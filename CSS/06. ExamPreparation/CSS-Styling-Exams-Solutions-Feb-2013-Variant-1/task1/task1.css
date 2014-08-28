@@ -1,0 +1,82 @@
+body, div, aside, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+aside {
+    width: 213px;
+}
+
+/*main menu*/
+ul.sidebar {
+    font-size: 22px;
+    position: relative;
+    background: #d29bff; /* Old browsers */
+    background: -moz-linear-gradient(top, #d29bff 0%, #8977ff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d29bff), color-stop(100%,#8977ff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #d29bff 0%,#8977ff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #d29bff 0%,#8977ff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #d29bff 0%,#8977ff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #d29bff 0%,#8977ff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+div#wrapper {
+    width: 960px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+}
+
+/*Sub menu*/
+li ul {
+    display: none;
+}
+
+ul {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+    ul li {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-left: 15px;
+        border-bottom: 1px solid #9D00FF;
+    }
+
+        ul li:last-child {
+            border: none;
+        }
+
+        ul li:hover {
+            border: 1px solid #9D00FF;
+            border-radius: 5px;
+            position: relative;
+        }
+
+            ul li:hover ul {
+                display: block;                
+                position: absolute;
+                left: 190px;
+                top: -5px;
+                background-color: #B5AAFF;
+                padding-right: 5px;
+                padding-left: 20px;
+                box-sizing: border-box;
+            }
+            
+            ul li ul li{
+                width: 180px;
+                box-sizing: border-box;
+            }
