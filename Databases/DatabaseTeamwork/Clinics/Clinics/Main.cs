@@ -4,12 +4,12 @@
     using System.Windows.Forms;
     using ClinicsProgram.Exports;
     using ClinicsProgram.Imports;
-    
-    partial class Main : Form
+
+    internal partial class Main : Form
     {  
         public Main()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void ImportFromZipExcelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -26,25 +26,25 @@
 
         private void ImportFromXmlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var importFromXml = new ImportFromXML();
+            var importFromXml = new ImportFromXml();
             importFromXml.ShowDialog();
         }
 
         private void ExportToPdfMenuItem_Click(object sender, EventArgs e)
         {
-            var exportToPdf = new ExportToPDF();
+            var exportToPdf = new ExportToPdf();
             exportToPdf.ShowDialog();
         }
 
         private void ExportToXml_Click(object sender, EventArgs e)
         {
-            var exportToXml = new ExportToXML();
+            var exportToXml = new ExportToXml();
             exportToXml.ShowDialog();
         }
 
         private void ExportToJson_Click(object sender, EventArgs e)
         {
-            var exportToJson = new ExportToJSONAndMySQL();
+            var exportToJson = new ExportToJsonAndMySql();
             exportToJson.ShowDialog();
         }
 
@@ -57,6 +57,11 @@
         private void Exit_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
