@@ -1,0 +1,1 @@
+SELECT * FROM Cars  WHERE City Equals 'Sofia' AND Year GreaterThan '1999' ORDER BY Id

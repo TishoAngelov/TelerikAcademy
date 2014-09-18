@@ -1,0 +1,1 @@
+SELECT * FROM Cars  WHERE Price Equals '10000.00' ORDER BY Id

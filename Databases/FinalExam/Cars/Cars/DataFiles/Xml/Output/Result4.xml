@@ -1,0 +1,1 @@
+SELECT * FROM Cars  WHERE Year LessThan '2008' AND Model Contains 'N' AND Manufacturer Contains 'N' AND Dealer Contains 'N' ORDER BY Id

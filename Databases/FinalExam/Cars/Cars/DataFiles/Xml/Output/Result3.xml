@@ -1,0 +1,1 @@
+SELECT * FROM Cars  WHERE Year Equals '2014' AND Price LessThan '100000' AND Price GreaterThan '90000' ORDER BY Id

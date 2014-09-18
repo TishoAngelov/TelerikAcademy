@@ -1,0 +1,1 @@
+SELECT * FROM Cars  WHERE Model Equals 'jmWRnkVnGUugKhgcfDaL' AND Manufacturer Equals 'zVKNbOL' AND Dealer Equals 'aVhMNylErc' ORDER BY Id

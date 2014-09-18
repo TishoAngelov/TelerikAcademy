@@ -1,0 +1,1 @@
+SELECT * FROM Cars  WHERE City Equals 'Kyustendil' ORDER BY Id
